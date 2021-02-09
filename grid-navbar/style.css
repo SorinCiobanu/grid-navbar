@@ -1,0 +1,102 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: #333;
+}
+
+.navbar{
+    display: grid;
+    /*grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr 2fr auto;*/
+    grid-template: 1fr 2fr auto / repeat(12, 1fr);
+}
+
+.navbar .dropdown{
+    display: none;
+    grid-row: 3;
+    grid-column: 2 / 12;
+}
+
+.navbar .options{
+    background-color: #555;
+    grid-column: 10 / 12;
+    grid-row: 3;
+    display: none;
+}
+
+.navbar .options a{
+    color: white;
+    display: block;
+    padding: 10%;
+}
+
+.navbar .options:target{
+    display: block;
+}
+
+.navbar .dropdown:target{
+    display: block;
+}
+
+.navbar .nav{
+    background-color: #111;
+    grid-column: 2 / 12;
+    grid-row: 2;
+
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    padding: 1%;
+}
+
+.navbar .nav,
+.navbar .top{
+    align-items: center;
+}
+
+.navbar .nav a:not(:first-child),
+.navbar .top a:not(:first-child){
+    text-align: right;
+}
+
+.navbar .nav a{
+    color: white;
+}
+
+.navbar .top .hours{
+    text-align: right;
+}
+
+.navbar .top a{
+    color: #444;
+}
+
+.navbar .nav .brand{
+    grid-column: 1 / 5;
+    align-self: stretch;
+}
+
+.navbar .nav .brand img{
+    height: 75%;
+    position: relative;
+    top: 12.5%;
+}
+
+.navbar .top{
+    background-color: #ddd;
+    padding: 1%;
+    grid-column: 2 / 12;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.navbar .top .hours{
+    grid-column: 2/10;
+}
